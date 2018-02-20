@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Profiles</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style type="text/css">
+	.hideDiv{
+		display: none;
+	}
+	img {
+		height: 200px;
+		width: 200px;
+	}
+	.btn-space {
+		margin-right: 40px;
+	}
+
+	.cardMargin {
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">Fusemachines Nepal</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<!-- Jumbotron Header -->
+		<header class="jumbotron my-1" >
+			<h1 class="display-5">A Warm Welcome!</h1>
+			<p class="lead"><strong>Keep a cool head and maintain a low profile. Never take the lead - but aim to do 	something big.<br> -Deng Xiaoping</strong>
+			</p>
+			<button type="button" class="btn  getProfiles btn-info">Show Profiles</button>
+			<button type="button" id = "newProfile" class="btn  btn-success">New Profile</button>
+		</header>
+
+		
+		<!-- Page Features -->
+		
+		<!-- /.row -->
+
+	</div>
+	<div class="container jumbotron my-5 tempDisplay">
+		<h3 class='text-center'>Your profiles will be displayed here!</h3>
+	</div>
+	<form id="form" class="formData hideDiv">
+
+		<div class = "container">
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="firstName" placeholder="First name">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="lastName" placeholder="Last name">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="department" placeholder="Department">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="house" placeholder="House">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="companyId" placeholder="Company Id">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="address" placeholder="Address">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<input type="text" class="form-control" name="contact" placeholder="Contact">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md">
+					<button type="button"  id = "resetProfile" class="btn  btn-success">Reset</button>
+				</div>
+				<div class="col-md">
+					<button type="button" id = "addProfile" class="btn  btn-success">Add Profile</button>
+				</div>
+				<div class="col-md">
+					<button type="button"  id = "cancelProfile" class="btn  btn-success">Cancel</button>
+				</div>
+			</div>
+
+		</div>
+	</form>
+	<div id = "updateForm" class = "hideDiv">
+	</div>
+	<!-- /.container -->
+	<div class="container">
+		<div class="row profiles"></div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Fusemachines Nepal 2017</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#newProfile').click(function(){
+				console.log('invisible');
+				$('#form').removeClass('hideDiv');
+			});
+			$('#cancelProfile').click(function(){
+				console.log('invisible');
+				$('#form').addClass('hideDiv');
+			});
+
+			$('.getProfiles').click(function(){
+				$.ajax({
+					url:'/profiles',
+					type:'GET',
+					dataType: 'json',
+					success:function(response){
+						console.log(response);
+						//$('#newCard').removeClass('invisible');
+						$('.tempDisplay').addClass('hideDiv');
+						for(var i = 0; i < response.users.length; i++){
+
+							$('.profiles').append("<div class='col-md-3 cardMargin'><div class='card'><img class='card-img-top' src='"+response.users[i].imageUrl+"' alt='Card image cap'><table class='table'><tr><td scope='col'>Profile Id</td><td>"+ response.users[i].id +"</td></tr><tr><td scope='col'>First Name</td><td>"+ response.users[i].firstName +"</td></tr><tr><td scope='col'>Last Name</td><td>"+ response.users[i].lastName +"</td></tr><tr><td scope='col'>Department</td><td>"+ response.users[i].department +"</td></tr><tr><td scope='col'>House</td><td>"+ response.users[i].house +"</td></tr><tr><td scope='col'>Company Id</td><td>"+ response.users[i].companyId +"</td></tr><tr><td scope='col'>Adress</td><td>"+ response.users[i].address +"</td></tr><tr><td scope='col'>Contact</td><td>"+ response.users[i].contact +"</td></tr></table><div class='card-footer'><button type='button' id = 'updateProfile' class='btn update btn-space btn-warning'>Update</button><button type='button' class='btn deleteProfile btn-danger'>Delete</button></div></div></div>");
+
+							console.log("profile: " + response.users[i]);
+							// $('.firstName').text(response.users[i].firstName);
+							// $('.lastName').text(response.users[i].lastName);
+							// $('.department').text(response.users[i].department);
+							// $('.house').text(response.users[i].house);
+							// $('.companyId').text(response.users[i].companyId);
+							// $('.address').text(response.users[i].address);
+							// $('.contact').text(response.users[i].contact);
+							//$('#newCard').clone().appendTo($('.profiles'));
+						}
+
+					},
+					error:function(response){
+						$('.tempDisplay').removeClass('hideDiv');
+						$('.tempDisplay').html("<h3 class='text-center'>Error while fetching profiles!</h3>");
+						console.log(response);
+					}	
+				});
+			});
+
+			$('#addProfile').click(function(){
+				console.log("reached");
+
+				var formdata = $("#form").serializeArray();
+				console.log(formdata);
+				var profile = {};
+				formdata.forEach( function(element, index) {
+					//console.log(formdata[index].name+ " " + formdata[index].value);
+					var key = formdata[index].name;
+					var value = formdata[index].value;
+					console.log("key: " + key + " & value: " + value);
+
+					profile[key] = value;
+				});
+				
+				$.ajax({
+					url:'/profiles',
+					type:'POST',
+					dataType: 'json',
+					data: profile,
+					success:function(response){
+
+						$('.profiles').append("<div class='col-md-3 cardMargin'><div class='card'><img class='card-img-top' src='"+response.profile.imageUrl+"' alt='Card image cap'><table class='table'><tr><td scope='col>Profile Id</td><td>"+response.profile.id+"</td></tr><tr><td scope='col'>First Name</td><td>"+ response.profile.firstName +"</td></tr><tr><td scope='col'>Last Name</td><td>"+ response.profile.lastName +"</td></tr><tr><td scope='col'>Department</td><td>"+ response.profile.department +"</td></tr><tr><td scope='col'>House</td><td>"+ response.profile.house +"</td></tr><tr><td scope='col'>Company Id</td><td>"+ response.profile.companyId +"</td></tr><tr><td scope='col'>Adress</td><td>"+ response.profile.address +"</td></tr><tr><td scope='col'>Contact</td><td>"+ response.profile.contact +"</td></tr></table><div class='card-footer'><button type='button' id='updateProfile' class='btn update btn-space btn-warning'>Update</button><button type='button' class='btn deleteProfile btn-danger'>Delete</button></div></div></div>");
+
+						$('#form').addClass('hideDiv');
+						alert(response.msg);
+						console.log(response);
+					},
+					error:function(response){
+						console.log(response);
+					}	
+				});
+			});
+
+
+			$('.deleteProfile').click(function(){
+				debugger;
+				console.log("reached");
+
+				// var formdata = $("#form").serializeArray();
+				// console.log(formdata);
+				// var profile = {};
+				// formdata.forEach( function(element, index) {
+				// 	//console.log(formdata[index].name+ " " + formdata[index].value);
+				// 	var key = formdata[index].name;
+				// 	var value = formdata[index].value;
+				// 	console.log("key: " + key + " & value: " + value);
+
+				// 	profile[key] = value;
+				// });
+				
+				// console.log(profile);
+				// $.ajax({
+				// 	url:'/profiles',
+				// 	type:'DELETE',
+				// 	dataType: 'json',
+				// 	data: profile,
+				// 	success:function(response){
+				// 		alert(response.msg);
+				// 		console.log(response);
+				// 	},
+				// 	error:function(response){
+				// 		console.log(response);
+				// 	}	
+				// });
+			});
+
+
+			$('#resetProfile').click(function(){
+				$('#form :input').val('');
+			});
+			
+
+			$(document).on('click','#updateProfile',function(){
+				var table = $(this).parent().parent().children('table')[0].getElementsByTagName("td");
+				var id = table[1].innerHTML;
+				var firstName = table[3].innerHTML;
+				var lastName = table[5].innerHTML;
+				var department = table[7].innerHTML;
+				var house = table[9].innerHTML;
+				var companyId = table[11].innerHTML;
+				var address = table[13].innerHTML;
+				var contact = table[15].innerHTML;
+
+
+
+				$('.updateForm').removeClass('hideDiv');
+				$('.updateForm').append("<h1>helloldsjfl;jaldsfjlasdjlfjdslkk</h1>");
+				// var profile = {
+				// 	"id": id,
+				// 	"firstName": firstName,
+				// 	"lastName": lastName,
+				// 	"department": department,
+				// 	"house": house,
+				// 	"companyId": companyId,
+				// 	"address": address,
+				// 	"contact": contact
+				// }
+
+				//console.log(profile);
+				
+
+
+				// var formdata = $("#form").serializeArray();
+				// console.log(formdata);
+				// var profile = {"id":1};
+				// formdata.forEach( function(element, index) {
+				// 	//console.log(formdata[index].name+ " " + formdata[index].value);
+				// 	var key = formdata[index].name;
+				// 	var value = formdata[index].value;
+				// 	console.log("key: " + key + " & value: " + value);
+
+				// 	profile[key] = value;
+				// });
+				
+				// $.ajax({
+				// 	url:'/profiles',
+				// 	type:'PUT',
+				// 	dataType: 'json',
+				// 	data: profile,
+				// 	success:function(response){
+				// 		console.log(response);
+				// 	},
+				// 	error:function(response){
+				// 		console.log(response);
+				// 	}	
+				// });
+			});
+
+
+			
+		});
+	</script>
+</body>
+</html>
